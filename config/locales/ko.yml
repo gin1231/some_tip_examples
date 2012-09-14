@@ -1,0 +1,10 @@
+ko:
+  hello: 안녕 세계
+
+  activerecord:
+    models:
+      member:
+    attributes:
+      member:
+        name: 이름
+        name_ko: 한글이름
