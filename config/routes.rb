@@ -1,4 +1,10 @@
 RailsTipsExample::Application.routes.draw do
+  get "inline/languages"
+
+  get 'locale' => 'examples#locale', :as => :locale
+  get 'search' => 'examples#search', :as => :search
+  get 'languages' => 'inline#languages', :as => :languages
+  get 'percent' => 'examples#percent', :as => :percent
   match ':controller(/:action(/:id))(.:format)'
   resources :members
 

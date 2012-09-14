@@ -1,0 +1,20 @@
+<%= form_tag languages_path, :method => :get do %>
+  <%= text_field_tag :lhs, params[:lhs] %> + <%= text_field_tag :rhs, params[:rhs] %> -> Ruby Line<br />
+  <%= text_field_tag :comment, params[:comment] %> -> Open3<br />
+  <%= submit_tag 'commit' %>
+<% end %>
+<div>
+  <h1>Ruby Inline</h1>
+  <%= @res %>
+</div>
+<div>
+  <h1>Open3</h1>
+  Out : <%= @out %><br />
+  Err : <%= @err %><br />
+  Status : <%= @status %><br />
+</div>
+<div>
+  <h1>%x, system</h1>
+  <%= @res1 %><br />
+  <%= @res2 %><br />
+</div>

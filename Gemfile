@@ -7,6 +7,9 @@ gem 'rails', '3.2.8'
 
 gem 'mysql2'
 gem 'thin'
+gem 'thinking-sphinx', '2.0.10'
+gem "RubyInline", "~> 3.11.3"
+
 
 
 # Gems used only for assets and not required

@@ -8,3 +8,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 Member.create(:name => "Jineok Kim", :name_ko => "김진억")
+Member.create(:name => "JaeHo Jeon", :name_ko => "전재호")
+Member.create(:name => "Jooshik Yoon", :name_ko => "윤주식")
+Member.create(:name => "Hyungsuk Yoon", :name_ko => "윤형석")
+
