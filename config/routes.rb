@@ -1,10 +1,11 @@
 RailsTipsExample::Application.routes.draw do
-  get "inline/languages"
 
   get 'locale' => 'examples#locale', :as => :locale
   get 'search' => 'examples#search', :as => :search
   get 'languages' => 'inline#languages', :as => :languages
   get 'percent' => 'examples#percent', :as => :percent
+  get 'dynamic' => 'examples#dynamic', :as => :dynamic
+  get 'feed' => 'examples#feed', :as => :feed
   match ':controller(/:action(/:id))(.:format)'
   resources :members
 

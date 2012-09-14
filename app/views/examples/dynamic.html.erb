@@ -1,0 +1,45 @@
+
+<script type="text/javascript">
+  $(function() {
+    a = ["a","b","c","d","omg"];
+
+  // i is 5
+    for(var i=0; i < 4; i++) {
+      var func = function(data) {
+        $('#res').append(a[i]+":"+data);
+      }
+      $.get("/feed?param="+a[i],func, 'text');
+    }
+
+  // jQuery each
+    $.each(a, function(i,value) {
+      $.get("/feed?param="+this,function(data) {
+        console.log(i);
+        console.log(value);
+        $('#res1').append(value+":"+data);
+      }, 'text');
+    });
+
+  // javascript closure
+    for(var i=0; i < 4; i++) {
+      var func = (function(i) {
+        return function(data) {
+          $('#res2').append(a[i]+":"+data);
+        }
+      })(i);
+      $.get("/feed?param="+a[i],func, 'text');
+    }
+  });
+</script>
+
+<h1>Res div : fail</h1>
+<div id="res">
+</div>
+
+<h1>Res1 div : Using jQuery each</h1>
+<div id="res1">
+</div>
+
+<h1>Res2 div : Using javascript closure</h1>
+<div id="res2">
+</div>

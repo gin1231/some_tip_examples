@@ -27,4 +27,10 @@ class ExamplesController < ApplicationController
     @res2_5 = /a/
   end
 
+  def dynamic
+  end
+  def feed
+    render :text => params[:param]+"Wow!   "
+  end
+
 end
